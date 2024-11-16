@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Dôrô",
+  "version": "1.0.0",
+  "description": "A simple pomodoro timer chrome extension aimed at helping you keep track of your work sessions so that you stay productive",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "images/dohroh-16.png",
+    "32": "images/dohroh-32.png",
+    "48": "images/dohroh-48.png",
+    "128": "images/dohroh-128.png"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
