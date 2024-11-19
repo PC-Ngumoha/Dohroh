@@ -12,7 +12,7 @@ const startTime = Date.now();
 const futureTime = startTime + setTime;
 
 const timerLoop = setInterval(countDownTimer);
-countDownTimer();
+// countDownTimer();
 
 function countDownTimer() {
   const currentTime = Date.now();
@@ -47,11 +47,11 @@ function countDownTimer() {
   `;
 
   // 5 sec condition
-  if (remainingTime <= 6000) {
-    semicircles[0].style.backgroundColor = "red";
-    semicircles[1].style.backgroundColor = "red";
-    timer.style.color = "red";
-  }
+  // if (remainingTime <= 6000) {
+  //   semicircles[0].style.backgroundColor = "red";
+  //   semicircles[1].style.backgroundColor = "red";
+  //   timer.style.color = "red";
+  // }
 
   // end
   if (remainingTime < 0) {
@@ -66,6 +66,8 @@ function countDownTimer() {
       <div>00</div>
     `;
 
+    // TODO: Find a better way to disable the timer component.
+    // NOTE: This may end up not being a necessary feature of the project.
     timer.style.color = "lightgray";
   }
 }

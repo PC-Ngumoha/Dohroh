@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
 
+:root {
+  --color-bg-light: #fff;
+  --color-bg-dark: #000;
+
+  --color-primary-light: #088b8b;
+  --color-primary-dark: #ed3013;
+
+  --color-accent-light: #ddd;
+  --color-accent-dark: #3d3d3d;
+
+  --color-background: var(--color-bg-light);
+  --color-primary: var(--color-primary-light);
+  --color-accent: var(--color-accent-light);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +23,13 @@
 
 html {
   font-family: "Heebo", sans-serif;
-  color: #088b8b;
+  color: var(--color-primary);
 }
+
+body {
+  background-color: var(--color-background);
+}
+
 
 /* Utility Class */
 .center {
@@ -22,13 +42,13 @@ html {
 .main-container {
   width: 300px;
   height: 300px;
-  background-color: white;
+  background-color: var(--color-background);
 }
 
 .circle-container {
   width: 200px;
   height: 200px;
-  background-color: #ddd;
+  background-color: var(--color-accent);
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
@@ -45,44 +65,28 @@ html {
 }
 
 .semicircle:nth-child(1) {
-  background-color: #088b8b;
+  background-color: var(--color-primary);
   z-index: 2;
 }
 
 .semicircle:nth-child(2) {
-  background-color: #088b8b;
+  background-color: var(--color-primary);
   z-index: 3;
 }
 
 .semicircle:nth-child(3) {
-  background-color: #ddd;
+  background-color: var(--color-accent);
   z-index: 4;
 }
 
 .outermost-circle {
   width: 190px;
   height: 190px;
-  background-color: white;
+  background-color: var(--color-background);
   border-radius: 50%;
   z-index: 5;
   /* display: none; */
 }
-
-/* .timer-container:hover .semicircle:nth-child(1) {
-  transform: rotate(180deg);
-  transition: 1s linear;
-}
-
-.timer-container:hover .semicircle:nth-child(2) {
-  transform: rotate(360deg);
-  transition: 2s linear;
-}
-
-.timer-container:hover .semicircle:nth-child(3) {
-  opacity: 0;
-  transition: opacity 0s 1s;
-} */
-
 
 /* FOR TIMER */
 .timer-container {
@@ -99,7 +103,7 @@ html {
 
 .timer div {
   font-size: 35px;
-  font-weight: 100;
+  font-weight: 600;
   width: 40px;
   height: 40px;
   display: flex;
@@ -114,4 +118,13 @@ html {
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 7.5px;
+}
+
+/* DARK MODE BASED ON SYSTEM PREFERENCE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-bg-dark);
+    --color-primary: var(--color-primary-dark);
+    --color-accent: var(--color-accent-dark);
+  }
 }
