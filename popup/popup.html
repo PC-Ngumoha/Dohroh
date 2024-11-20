@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dôrô</title>
 
+  <!--Linking in Font Awesome stylesheet-->
+  <link rel="stylesheet" href="../font-awesome/css/all.min.css">
+
+  <!--Linking in custom stylesheet -->
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
@@ -21,13 +25,41 @@
     </div>
 
     <!--Timer-->
-    <div class="timer-container center">
+    <div class="timer-container center column">
+      <div class="session-icon">
+        <i class="fa-regular fa-eye"></i>
+      </div>
       <div class="timer center">
 
       </div>
+      <div class="session-counter">
+        <div class="active"></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+      </div>
+      <span class="session-tag">
+        Focus
+      </span>
     </div>
   </div>
 
+  <!--Control Buttons at the Bottom of the page -->
+  <div class="controls-container">
+    <button>
+      <i class="fa-solid fa-stop"></i>
+    </button>
+
+    <button>
+      Start
+    </button>
+
+    <button>
+      <i class="fa-solid fa-gear"></i>
+    </button>
+  </div>
+
+  <!-- <script src="https://kit.fontawesome.com/9721a30d36.js" crossorigin="anonymous"></script> -->
   <script src="timer.js"></script>
 </body>
 </html>
